@@ -8,12 +8,6 @@ The recorder itself is the web front-end; the rest of the repo (the Expo app)
 is the consumer. The recorder is intentionally offline-capable and writes its
 output directly into the RN app's asset tree.
 
-
-
-
-https://github.com/user-attachments/assets/b96170da-ccaa-499d-be43-e9b4dbf26736
-
-
 ---
 
 ## 1. What it does
