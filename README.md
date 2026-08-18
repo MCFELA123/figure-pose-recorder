@@ -10,6 +10,12 @@ output directly into the RN app's asset tree.
 
 ---
 
+
+
+https://github.com/user-attachments/assets/444a7e09-a697-4a75-8c24-1429751070c3
+
+
+
 ## 1. What it does
 
 1. Opens a webcam feed and runs MediaPipe Pose (33 landmarks) at ~30 fps.
