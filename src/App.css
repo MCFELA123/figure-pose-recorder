@@ -1,0 +1,161 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html, body, #root {
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ background: #0d0d1a;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ color: #fff;
+}
+
+.app-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ gap: 16px;
+ padding: 20px;
+}
+
+.status-bar {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding: 10px 20px;
+ background: rgba(255,255,255,0.06);
+ border-radius: 12px;
+ font-size: 14px;
+}
+
+.status-dot {
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+}
+
+.status-dot.active {
+ background: #34C759;
+ box-shadow: 0 0 8px #34C759;
+ animation: pulse 1.5s ease-in-out infinite;
+}
+
+.status-dot.inactive {
+ background: #FF3B30;
+}
+
+.status-dot.recording {
+ background: #FF3B30;
+ box-shadow: 0 0 12px #FF3B30;
+ animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.5; }
+}
+
+.controls-row {
+ display: flex;
+ gap: 12px;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.btn {
+ padding: 12px 24px;
+ border: 2px solid rgba(255,255,255,0.2);
+ border-radius: 14px;
+ background: rgba(255,255,255,0.08);
+ color: #fff;
+ font-size: 15px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.2s;
+ backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+ background: rgba(255,255,255,0.15);
+ border-color: rgba(255,255,255,0.4);
+ transform: scale(1.02);
+}
+
+.btn:active {
+ transform: scale(0.98);
+}
+
+.btn:disabled {
+ opacity: 0.4;
+ cursor: not-allowed;
+ transform: none;
+}
+
+.btn.primary {
+ background: rgba(0,122,255,0.2);
+ border-color: rgba(0,122,255,0.5);
+}
+
+.btn.primary:hover {
+ background: rgba(0,122,255,0.3);
+}
+
+.btn.record {
+ background: rgba(255,59,48,0.2);
+ border-color: rgba(255,59,48,0.5);
+}
+
+.btn.record:hover {
+ background: rgba(255,59,48,0.35);
+}
+
+.btn.danger {
+ background: rgba(255,59,48,0.3);
+ border-color: rgba(255,59,48,0.7);
+ animation: recordPulse 2s ease-in-out infinite;
+}
+
+@keyframes recordPulse {
+ 0%, 100% { box-shadow: 0 0 0 rgba(255,59,48,0); }
+ 50% { box-shadow: 0 0 20px rgba(255,59,48,0.3); }
+}
+
+.btn.save {
+ background: rgba(52,199,89,0.2);
+ border-color: rgba(52,199,89,0.5);
+}
+
+.btn.save:hover {
+ background: rgba(52,199,89,0.3);
+}
+
+.btn.secondary {
+ border-color: rgba(255,255,255,0.1);
+ opacity: 0.7;
+}
+
+.btn.secondary:hover {
+ opacity: 1;
+}
+
+.landmark-count {
+ color: rgba(255,255,255,0.5);
+ font-size: 13px;
+}
+
+.recording-summary {
+ display: flex;
+ gap: 12px;
+ padding: 10px 20px;
+ background: rgba(52,199,89,0.1);
+ border: 1px solid rgba(52,199,89,0.3);
+ border-radius: 10px;
+ font-size: 13px;
+ color: #34C759;
+}
+
